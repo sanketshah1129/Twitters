@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.sanket.twitters"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+
+    // retrofit, gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
+    implementation 'com.twitter.sdk.android:tweet-ui:3.1.1'
+    implementation 'com.twitter.sdk.android:tweet-composer:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter-mopub:3.1.1'
+    // (Optional) Monetize using mopub
+    //compile 'com.twitter.sdk.android:twitter-mopub:3.1.1'
+
+}

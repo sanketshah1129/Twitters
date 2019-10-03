@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Twitters</string>
+    <string name="title_activity_maps">Twitters</string>
+
+    <string name="CONSUMER_KEY">"zcfJKWPMeThe3TUdVSVQqbxhe"</string>
+    <string name="CONSUMER_SECRET">"xOBHLi574MlYFFGvxNDFgODtyhfzHw9s9zI17TacFAneerZK8Z"</string>
+
+</resources>
